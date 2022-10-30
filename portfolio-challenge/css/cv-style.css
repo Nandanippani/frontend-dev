@@ -27,6 +27,7 @@ body {
     display: flex;
     align-self: center;
     background-color: #fff;
+    border: 1px solid lightgray;
 }
 
 .about-me {
