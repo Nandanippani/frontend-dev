@@ -32,6 +32,7 @@ body {
   display: flex;
   align-self: center;
   background-color: #fff;
+  background-image: url(../images/woman-avatar-icon.svg);
 }
 
 #my-name {
@@ -39,11 +40,12 @@ body {
 }
 
 nav {
+  display: flex;
   padding: 10px;
   background: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
 }
 
-.nav a {
+nav a {
   color: #fff;
   text-decoration: none;
   margin-left: 10px;
@@ -64,6 +66,7 @@ nav {
   text-align: center;
   background: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
   color: #fff;
+
 }
 
 .page-wrapper {
@@ -87,7 +90,7 @@ nav {
     "surf-work surf-work"
     "led-wall calc"
     "pastle run-buddy";
-  height: 400px;
+  height: 600px;
 }
 
 .category {
@@ -99,6 +102,24 @@ nav {
   align-content: end;
 }
 
+.category:hover {
+
+  transform: scale(1.01);
+}
+
+.heading {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.heading a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
 #surf-work {
   grid-area: surf-work;
   background-image: url(../images/01_coding.jpg);
@@ -107,26 +128,26 @@ nav {
 
 #led-wall {
   grid-area: led-wall;
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/01_coding.jpg);
 }
 
 #calc {
   grid-area: calc;
-  background-image: url(../images/02-portfolio-2.jpg);
+  background-image: url(../images/01_coding.jpg);
 }
 
 #pastle {
   grid-area: pastle;
-  background-image: url(../images/02-portfolio-4.jpg);
+  background-image: url(../images/01_coding.jpg);
 
 }
 
 #run-buddy {
   grid-area: run-buddy;
-  background-image: url(../images/02-run-buddy.jpg);
+  background-image: url(../images/01_coding.jpg);
 }
 
-.contact {
+#contact {
   margin-top: 10px;
   padding: 20px;
   background-color: #0f0f35;
@@ -135,33 +156,71 @@ nav {
   justify-content: space-around;
 }
 
-.contact>div:first-child {
+.contact-title {
+  width: 100%;
+  text-align: center;
+}
+
+#contact>div:first-child {
   font-size: xx-large;
 }
 
-
-#contact-details>div {
-  padding: 5px;
-  width: 50%;
+#contact-details {
+  width: 100%;
+  font-family: monospace, monospace;
 }
 
-#contact-details>#email,
-#contact-details>#git,
-#contact-details>#tw {
-  display: flex;
-  justify-content: space-between;
-
-}
-
-#contact-details>#email ul,
-#contact-details>#git ul,
-#contact-details>#tw ul {
-  display: flex;
-  list-style: none;
-}
-
-#contact-details>#email ul li,
-#contact-details>#git ul li,
-#contact-details>#tw ul li {
+#contact-details div {
   padding: 10px;
+}
+
+#contact-details div span {
+  padding-right: 20px;
+}
+
+
+#email>span:first-child {
+  background-image: url('../images/email.png');
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+
+  }
+
+  nav a {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me {
+    position: initial;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background: linear-gradient(90deg, #0f0f35 0%, #0f0f35 25%, #2b2b74 100%);
+  }
+
+  #work-detail {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-areas: "surf-work"
+      "surf-work"
+      "led-wall"
+      "calc"
+      "pastle"
+      "run-buddy";
+  }
+
+  #contact {
+    position: relative;
+  }
 }
