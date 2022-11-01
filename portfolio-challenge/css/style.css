@@ -4,6 +4,7 @@
   font-family: Segoe UI;
 }
 
+/* Used CSS variables */
 :root {
   --navy-shed: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
   --color-white: #fff;
@@ -11,11 +12,12 @@
 }
 
 
-
 body {
   font-family: Segoe UI;
 }
 
+/* Header CSS */
+/* Used flexbox property */
 .header {
   background-color: #0f0f35;
   display: flex;
@@ -47,6 +49,8 @@ body {
   font-size: medium;
 }
 
+/* Navbar CSS */
+
 nav {
   display: flex;
   padding: 10px;
@@ -59,6 +63,13 @@ nav a {
   margin-left: 10px;
 
 }
+
+#projects {
+  padding: 10px;
+  background-color: #e9e9e9;
+}
+
+/* About-me CSS */
 
 .about-me {
   position: absolute;
@@ -77,17 +88,17 @@ nav a {
 
 }
 
-.page-wrapper {
+/* Portfolio-Content CSS */
+
+.portfolio-content {
   width: 98%;
   margin: 10px auto;
+
 }
 
+/* With all above CSS used when website page is loaded the page presents my name, avatar, and links to sections about me, my work, and contact-details.*/
 
-#projects {
-  padding: 10px;
-  background-color: #e9e9e9;
-}
-
+/* Used Grid property */
 #work-detail {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -101,7 +112,8 @@ nav a {
   height: 600px;
 }
 
-.category {
+
+.my-work {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,16 +122,22 @@ nav a {
   align-content: end;
 }
 
-.category:hover {
-
-  transform: scale(1.01);
+/* When hover over project's images, image size gets larger than other projects.*/
+.my-work:hover {
+  transform: scale(1.05);
 }
 
 .heading {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   padding: 10px;
   background-color: var(--bgcolor-white);
   opacity: 0.5;
+}
+
+.heading div {
+  margin-right: 10px;
 }
 
 .heading a {
@@ -153,7 +171,10 @@ nav a {
 #project-5 {
   grid-area: project-5;
   background-image: url(../images/01_coding.jpg);
+
 }
+
+/* footer contact CSS */
 
 #contact {
   margin-top: 10px;
@@ -192,7 +213,9 @@ nav a {
   color: var(--color-white);
 }
 
+/* Used media query to make layout responsive to get resized and viewed on various screens*/
 @media screen and (max-width: 600px) {
+
   .header {
     display: flex;
     align-items: center;
@@ -229,6 +252,11 @@ nav a {
   }
 
   #contact {
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+
   }
 }
