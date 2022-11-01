@@ -4,6 +4,14 @@
   font-family: Segoe UI;
 }
 
+:root {
+  --navy-shed: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
+  --color-white: #fff;
+  --bgcolor-white: #fff;
+}
+
+
+
 body {
   font-family: Segoe UI;
 }
@@ -15,7 +23,7 @@ body {
   padding: 10px;
   align-items: flex-start;
   height: 100px;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .name {
@@ -31,7 +39,7 @@ body {
   border-radius: 50%;
   display: flex;
   align-self: center;
-  background-color: #fff;
+  background-color: var(--bgcolor-white);
   background-image: url(../images/woman-avatar-icon.svg);
 }
 
@@ -42,11 +50,11 @@ body {
 nav {
   display: flex;
   padding: 10px;
-  background: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
+  background: var(--navy-shed);
 }
 
 nav a {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
   margin-left: 10px;
 
@@ -64,8 +72,8 @@ nav a {
   display: flex;
   align-items: center;
   text-align: center;
-  background: linear-gradient(90deg, #2b2b74 0%, #0f0f35 75%, #0f0f35 100%);
-  color: #fff;
+  background: var(--navy-shed);
+  color: var(--color-white);
 
 }
 
@@ -86,10 +94,10 @@ nav a {
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
-  grid-template-areas: "surf-work surf-work"
-    "surf-work surf-work"
-    "led-wall calc"
-    "pastle run-buddy";
+  grid-template-areas: "code-refactor code-refactor"
+    "code-refactor code-refactor"
+    "project-2 project-3"
+    "project-4 project-5";
   height: 600px;
 }
 
@@ -110,7 +118,7 @@ nav a {
 .heading {
   width: 100%;
   padding: 10px;
-  background-color: #fff;
+  background-color: var(--bgcolor-white);
   opacity: 0.5;
 }
 
@@ -120,30 +128,30 @@ nav a {
   color: black;
 }
 
-#surf-work {
-  grid-area: surf-work;
+#code-refactor {
+  grid-area: code-refactor;
   background-image: url(../images/01_coding.jpg);
 
 }
 
-#led-wall {
-  grid-area: led-wall;
+#project-2 {
+  grid-area: project-2;
   background-image: url(../images/01_coding.jpg);
 }
 
-#calc {
-  grid-area: calc;
+#project-3 {
+  grid-area: project-3;
   background-image: url(../images/01_coding.jpg);
 }
 
-#pastle {
-  grid-area: pastle;
+#project-4 {
+  grid-area: project-4;
   background-image: url(../images/01_coding.jpg);
 
 }
 
-#run-buddy {
-  grid-area: run-buddy;
+#project-5 {
+  grid-area: project-5;
   background-image: url(../images/01_coding.jpg);
 }
 
@@ -151,7 +159,7 @@ nav a {
   margin-top: 10px;
   padding: 20px;
   background-color: #0f0f35;
-  color: #fff;
+  color: var(--color-white);
   display: flex;
   justify-content: space-around;
 }
@@ -181,7 +189,7 @@ nav a {
 
 #email>span:first-child {
   background-image: url('../images/email.png');
-  color: #fff;
+  color: var(--color-white);
 }
 
 @media screen and (max-width: 600px) {
@@ -206,18 +214,18 @@ nav a {
     width: 100%;
     height: auto;
     padding: 5px;
-    background: linear-gradient(90deg, #0f0f35 0%, #0f0f35 25%, #2b2b74 100%);
+    background: var(--navy-shed);
   }
 
   #work-detail {
     grid-template-columns: 1fr;
     grid-template-rows: 300px 300px 300px 300px 300px;
-    grid-template-areas: "surf-work"
-      "surf-work"
-      "led-wall"
-      "calc"
-      "pastle"
-      "run-buddy";
+    grid-template-areas: "code-refactor"
+      "code-refactor"
+      "project-2"
+      "project-3"
+      "project-4"
+      "project-5";
   }
 
   #contact {
